@@ -1,0 +1,74 @@
+    <!-- Include D3.js library -->
+    <script src="https://d3js.org/d3.v7.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/d3-tile@1"></script>
+</head>
+<body>
+
+    <!-- SVG container for the map -->
+    <svg id="map"></svg>
+
+    <script>
+        // JavaScript code for rendering the map
+        const mapWidth = 650; // Define width of the map
+        const mapHeight = 760; // Define height of the map
+
+        const width = 750;
+        const height = 770;
+        
+        // Define projection
+        const projection = d3.geoMercator()
+            .center([-79.0558, 35.9132])
+            .scale(Math.pow(2, 21) / (2 * Math.PI))
+            .translate([mapWidth / 2, mapHeight / 2]);
+        
+        // Define path generator
+        const path = d3.geoPath(projection);
+        
+        // Define tile function
+        const tile = d3.tile()
+            .size([mapWidth, mapHeight])
+            .scale(projection.scale() * 2 * Math.PI)
+            .translate(projection([0, 0]));
+        
+        // Generate tiles
+        const tiles = tile();
+        
+        // Render map using SVG
+        const svg = d3.select("#map")
+            .attr("viewBox", `0 0 ${width} ${height}`)
+            .attr("width", width)
+            .attr("height", height);
+        
+        // Render tiles
+        const map = svg.selectAll("image")
+            .data(tiles)
+            .enter().append("image")
+            .attr("xlink:href", ([x, y, z]) => `https://tiles.stadiamaps.com/tiles/stamen_toner/${z}/${x}/${y}${devicePixelRatio > 1 ? "@2x" : ""}.png`)
+            .attr("x", ([x, y, z]) => Math.round((x + tiles.translate[0]) * tiles.scale))
+            .attr("y", ([x, y, z]) => Math.round((y + tiles.translate[1]) * tiles.scale))
+            .attr("width", tiles.scale)
+            .attr("height", tiles.scale);
+
+
+        lonLatPoint = [-87.6371345, 41.9311325] // a point in Chicago, Illinois
+        projectedPoint = projection(lonLatPoint)
+        console.log(projectedPoint)
+
+        svg.append('circle')
+            .attr('cx', projectedPoint[0])
+            .attr('cy', projectedPoint[1])
+            .attr('r', 10)
+            .attr('fill', 'lightblue')
+            .attr('stroke', 'none')
+    
+        svg.append('text')
+            .attr('x',  projectedPoint[0] + 6)
+            .attr('y',  projectedPoint[1])
+            .attr('dy', 2)
+            .attr('font-size', '9')
+            .attr('fill', 'lightblue')
+            .text(lonLatPoint)
+
+    </script>
+</body>
+
