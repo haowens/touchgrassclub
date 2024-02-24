@@ -4,6 +4,7 @@ import * as d3Tile from "d3-tile";
 
 const ChapelHillMap = () => {
 
+useEffect(() => {
 
 const div = d3.selectAll("div");
 <svg id="map"></svg>
@@ -48,10 +49,10 @@ const map = svg.selectAll("image")
 .attr("width", tiles.scale)
 .attr("height", tiles.scale);
 
-      const lonLatPoint = [-87.6371345, 41.9311325];
-      const projectedPoint = projection(lonLatPoint);
+const lonLatPoint = [-87.6371345, 41.9311325];
+const projectedPoint = projection(lonLatPoint);
 
-
+}, []);
   return (
     <svg id="map"></svg>
   );
