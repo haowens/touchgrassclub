@@ -1,0 +1,13 @@
+/* File: font.css */
+@font-face {
+    font-family: 'Sk-Modernist-Regular';
+    src: local('Sk-Modernist-Regular'),
+        url('./fonts/Sk-Modernist-Regular.otf') format('otf');
+}
+
+@font-face {
+    font-family: 'Thunder-BoldLC';
+    src: local('Sk-Thunder-BoldLC-Regular'),
+        url('./fonts/Thunder-BoldLC.ttf') format('ttf');
+}
+
