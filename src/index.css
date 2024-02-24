@@ -11,3 +11,71 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+.running {
+  display: inline-block;
+  width: 100px;
+  height: 100px;
+  /* background: black; */
+  background-image: url('./images/adrianne.png');
+  background-size: cover; 
+}
+
+.reading {
+  display: inline-block;
+  width: 100px;
+  height: 100px;
+  /* background: black; */
+  background-image: url('./images/adrianne.png');
+  background-size: cover; 
+}
+
+.cooking {
+  display: inline-block;
+  width: 100px;
+  height: 100px;
+  /* background: black; */
+  background-image: url('./images/adrianne.png');
+  background-size: cover; 
+}
+
+.yoga {
+  display: inline-block;
+  width: 100px;
+  height: 100px;
+  /* background: black; */
+  background-image: url('./images/adrianne.png');
+  background-size: cover; 
+}
+
+.hiking {
+  display: inline-block;
+  width: 100px;
+  height: 100px;
+  /* background: black; */
+  background-image: url('./images/adrianne.png');
+  background-size: cover; 
+}
+
+.arts {
+  display: inline-block;
+  width: 100px;
+  height: 100px;
+  /* background: black; */
+  background-image: url('./images/adrianne.png');
+  background-size: cover; 
+}
+
+.portal {
+  width: 350px;
+  height: 350px;
+  margin-left: 800px;
+  border: 5px solid yellowgreen;
+  margin-top: 0px;
+  background-color: black;
+  border-radius: 50%; /* Ensures the element is a circle */
+}
+
+.overlap {
+  background-color: yellowgreen;
+}
