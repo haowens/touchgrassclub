@@ -62,8 +62,8 @@ const Mapping = () => {
                 .datum({ type: "LineString", coordinates: route })
                 .attr("class", "route")
                 .attr("d", path)
-                .style("stroke", 'red')
-                .style("stroke-width", 2)
+                .style("stroke", '#b8b8ff')
+                .style("stroke-width", 10)
                 .style("fill", "none");
         });
     }, []);

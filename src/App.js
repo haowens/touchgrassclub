@@ -1,6 +1,6 @@
 import "./App.css";
 import React from "react";
-import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
+import { BrowserRouter, Route, Routes } from "react-router-dom";
 import HomePageDrag from "./components/HomePageDrag";
 import ChapelHillMap from "./components/ChapelHillMap";
 import Running from "./components/routes/Running";
@@ -12,25 +12,26 @@ import Cooking from "./components/routes/Cooking";
 import EventPage from "./components/event_page";
 import Mapping from "./components/mapping";
 import Forum from "./components/forum";
+import ContactForm from "./components/ContactForm";
 
 function App() {
   return (
-    <Router>
       <Routes>
+        <Route index element={<HomePageDrag />} />
         <Route path="/map" element={<ChapelHillMap/>} />
         <Route path="/running" element={<EventPage/>} />
         <Route path="/forum" element={<Forum/>} />
         <Route path="/arts" element={<Arts />} />
         {/* Add more routes for additional pages */} 
-        <Route path="/" element={<HomePageDrag />} />
         <Route path="/reading" element={<Reading />} />
         <Route path="/yoga" element={<Yoga />} />
         <Route path="/hiking" element={<Hiking />} />
         <Route path="/cooking" element={<Cooking />} />
         <Route path="/arts" element={<Arts />} />
+        <Route path="*" element={<HomePageDrag />} />
+        <Route path="/contact" element={<ContactForm/>}/>
         {/* Add more routes for additional pages */}
       </Routes>
-    </Router>
   );
 }
 

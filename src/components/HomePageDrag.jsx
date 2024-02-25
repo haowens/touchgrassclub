@@ -19,7 +19,7 @@ const HomePageDrag = () => {
   const navigate = useNavigate();
 
   const handleButtonClick = () => {
-    navigate('/forum');
+    navigate('/contact');
   }
   const handleDrop = () => {
     const running = runningRef.current.getBoundingClientRect();
@@ -154,7 +154,7 @@ const HomePageDrag = () => {
   };
 
   return (
-    <div>
+    <div className="home">
       <Draggable onDrag={handleDrag} onStop={handleDrop}>
         <div ref={runningRef} className="running"></div>
       </Draggable>
@@ -175,8 +175,8 @@ const HomePageDrag = () => {
       </Draggable>
       <div ref={portalRef} className={`portal ${(overlapRunning || overlapReading || overlapYoga || overlapHiking || overlapCooking || overlapArts) ? 'overlap' : ''}`}></div>
     
-      <button className="feedback1">Add an event or resource</button>
-      <button className="feedback2" onClick={handleButtonClick}>Get in contact</button>
+      <button className="feedback1" onClick={handleButtonClick}>Add an event or resource</button>
+      <button className="feedback3" onClick={handleButtonClick}>About us!</button>
     </div>
   );
 };
