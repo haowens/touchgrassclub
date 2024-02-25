@@ -18,10 +18,12 @@ const rightStyle = {
     paddingRight: '30px'
 };
 const customFontStyle = {
-    fontFamily: 'Thunder-BoldLC',
+    fontFamily: 'Thunder',
     textAlign: 'center',
     fontSize: '5rem'
 }
+
+
 
 
 const Running = () => {

@@ -89,7 +89,8 @@ code {
   border: none;
   border-radius: 7px;
   background-color: rgb(211, 234, 255);
-  font-size: large;
+  font-size: x-large;
+  font-family: 'Thunder';
 }
 
 .feedback1:hover {
@@ -101,29 +102,72 @@ code {
   border: none;
   border-radius: 7px;
   background-color: rgb(184, 184, 255);
+  font-size: x-large;
+  font-family: 'Thunder';
+}
+
+.feedbackForm {
+  width: 100vw;
+  height: 100%;
+  gap: 20px;
+  background-color: rgb(211, 234, 255);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+h1 {
+  font-family: "Thunder";
+  font-size: 5rem;
+  margin-bottom: 0px;
+}
+
+.input-1 {
+  width: 600px;
+  padding: 20px;
+  padding-bottom: 100px;
+  text-align: start;
   font-size: large;
+  margin: 0px;
+  border: 2px solid rgb(184, 184, 255);
+  border-radius: 5px;
+}
+
+.input-category {
+  padding-right: 20px;
+  padding-left: 20px;
+  width: 600px;
+  text-align: start;
+  font-size: large;
+  margin: 0px;
+  border: 2px solid rgb(184, 184, 255);
+  border-radius: 5px;
 }
 
 .feedback2 {
-  position: fixed;
-  bottom: 80px;
-  right: 30px;
-  text-align: center;
-  padding: 10px 40px;
-  border: none;
-  border-radius: 7px;
-  background-color: rgb(211, 234, 255);
-  font-size: large;
-}
-
-.feedback2:hover {
-  position: fixed;
-  bottom: 80px;
-  right: 30px;
   text-align: center;
   padding: 10px 40px;
   border: none;
   border-radius: 7px;
   background-color: rgb(184, 184, 255);
-  font-size: large;
+  font-size: x-large;
+  font-family: 'Thunder';
+  margin-bottom: 100px;
+}
+
+.feedback2:hover{
+  cursor: pointer;
+}
+
+h2 {
+  font-family: 'Thunder';
+  margin: 0px;
+}
+
+.column {
+  width: 43%;
+  align-items: flex-start;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
 }
