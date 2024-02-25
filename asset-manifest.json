@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/touchgrassclub/static/css/main.2073ca97.css",
-    "main.js": "/touchgrassclub/static/js/main.2087b50f.js",
+    "main.css": "/touchgrassclub/static/css/main.11a7202c.css",
+    "main.js": "/touchgrassclub/static/js/main.8fd18e1c.js",
     "static/js/453.6f1b2609.chunk.js": "/touchgrassclub/static/js/453.6f1b2609.chunk.js",
     "static/media/hiking.png": "/touchgrassclub/static/media/hiking.6660435166ef14d2e151.png",
     "static/media/reading.png": "/touchgrassclub/static/media/reading.83da04477390842e0a13.png",
@@ -10,12 +10,13 @@
     "static/media/running.png": "/touchgrassclub/static/media/running.17103a45006a0839c8b4.png",
     "static/media/profile_icon.png": "/touchgrassclub/static/media/profile_icon.dab47da761ffd5c6171a.png",
     "index.html": "/touchgrassclub/index.html",
-    "main.2073ca97.css.map": "/touchgrassclub/static/css/main.2073ca97.css.map",
-    "main.2087b50f.js.map": "/touchgrassclub/static/js/main.2087b50f.js.map",
+    "static/media/time.csv": "/touchgrassclub/static/media/time.c08b14664e6c55bd9473.csv",
+    "main.11a7202c.css.map": "/touchgrassclub/static/css/main.11a7202c.css.map",
+    "main.8fd18e1c.js.map": "/touchgrassclub/static/js/main.8fd18e1c.js.map",
     "453.6f1b2609.chunk.js.map": "/touchgrassclub/static/js/453.6f1b2609.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.2073ca97.css",
-    "static/js/main.2087b50f.js"
+    "static/css/main.11a7202c.css",
+    "static/js/main.8fd18e1c.js"
   ]
 }
