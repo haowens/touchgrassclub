@@ -1,16 +1,14 @@
 import "./App.css";
 import React from "react";
-import { BrowserRouter, Route, Routes } from "react-router-dom";
+import { Route, Routes } from "react-router-dom";
 import HomePageDrag from "./components/HomePageDrag";
 import ChapelHillMap from "./components/ChapelHillMap";
-import Running from "./components/routes/Running";
 import Reading from "./components/routes/Reading";
 import Hiking from "./components/routes/Hiking";
 import Arts from "./components/routes/Arts";
 import Yoga from "./components/routes/Yoga";
 import Cooking from "./components/routes/Cooking";
 import EventPage from "./components/event_page";
-import Mapping from "./components/mapping";
 import Forum from "./components/forum";
 import ContactForm from "./components/ContactForm";
 

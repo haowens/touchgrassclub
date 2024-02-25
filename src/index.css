@@ -14,8 +14,8 @@ code {
 
 .running {
   display: inline-block;
-  width: 200px;
-  height: 290px;
+  width: 190px;
+  height: 300px;
   /* background: black; */
   background-image: url('./images/running.png');
   background-size: cover; 
@@ -33,17 +33,28 @@ code {
 
 .reading {
   display: inline-block;
-  width: 100px;
+  width: 160px;
+  height: 250px;
+  /* background: black; */
+  background-image: url('./images/reading.png');
+  background-size: cover; 
+}
+
+.reading2 {
+  display: inline-block;
+  margin-top: 20px;
+  margin-left: 40px;
+  width: 60px;
   height: 100px;
   /* background: black; */
-  background-image: url('./images/adrianne.png');
+  background-image: url('./images/reading.png');
   background-size: cover; 
 }
 
 .cooking {
   display: inline-block;
   width: 150px;
-  height: 260px;
+  height: 240px;
   /* background: black; */
   background-image: url('./images/cooking.png');
   background-size: cover; 
@@ -62,17 +73,28 @@ code {
 
 .yoga {
   display: inline-block;
-  width: 100px;
-  height: 100px;
+  width: 310px;
+  height: 160px;
   /* background: black; */
-  background-image: url('./images/adrianne.png');
+  background-image: url('./images/yoga.png');
+  background-size: cover; 
+}
+
+.yoga2 {
+  margin-top: 40px;
+  margin-left: 20px;
+  display: inline-block;
+  width: 200px;
+  height: 90px;
+  /* background: black; */
+  background-image: url('./images/yoga.png');
   background-size: cover; 
 }
 
 .hiking {
   display: inline-block;
-  width: 140px;
-  height: 300px;
+  width: 110px;
+  height: 260px;
   /* background: black; */
   background-image: url('./images/hiking.png');
   background-size: cover; 
@@ -88,18 +110,9 @@ code {
   background-size: cover; 
 }
 
-.arts {
-  display: inline-block;
-  width: 100px;
-  height: 100px;
-  /* background: black; */
-  background-image: url('./images/adrianne.png');
-  background-size: cover; 
-}
-
 .portal {
-  width: 350px;
-  height: 350px;
+  width: 375px;
+  height: 375px;
   margin-left: 800px;
   border: 7px solid rgb(212, 184, 255);
   margin-top: 0px;
