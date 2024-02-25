@@ -19,6 +19,10 @@ const HomePageDrag = () => {
   const handleButtonClick = () => {
     navigate('/contact');
   }
+
+  const handleButtonClickAbout = () => {
+    navigate('/card');
+  }
   const handleDrop = () => {
     const running = runningRef.current.getBoundingClientRect();
     const reading = readingRef.current.getBoundingClientRect();
@@ -153,7 +157,7 @@ const HomePageDrag = () => {
       <div ref={portalRef} className={`portal ${(overlapRunning || overlapReading || overlapYoga || overlapHiking || overlapCooking ) ? 'overlap' : ''}`}></div>
     
       <button className="feedback1" onClick={handleButtonClick}>Add an event or resource</button>
-      <button className="feedback3" onClick={handleButtonClick}>About us!</button>
+      <button className="feedback3" onClick={handleButtonClickAbout}>About us!</button>
     </div>
   );
 };
