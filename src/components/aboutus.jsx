@@ -13,8 +13,8 @@ const AboutUs = () => {
 
       console.log(data)
       // Specify the chart dimensions
-      const width = 628;
-      const height = 600;
+      const width = 528;
+      const height = 450;
       const marginTop = 20;
       const marginRight = 20;
       const marginBottom = 80;
@@ -99,8 +99,13 @@ const AboutUs = () => {
   }, []);
 
   return (
+<<<<<<< HEAD
     <div style={{ marginTop: '10px',display: 'flex', justifyContent: 'center', flexDirection: 'column-reverse', alignItems: 'center' }}>
       <p style={{fontSize: 'x-large', fontFamily: 'Thunder', color: 'rgb(63, 0, 111)'}}>Data from the American Time Use Survey</p>
+=======
+    <div style={{ marginTop: '10px', display: 'flex', justifyContent: 'center', flexDirection: 'column-reverse', alignItems: 'center' }}>
+      <p style={{marginTop: '5px'}}>Data from the American Time Use Survey</p>
+>>>>>>> f28f80c02c0e60541311abc0f699812d6f13b6d4
       <svg ref={svgRef}></svg>
       
     </div>
