@@ -46,6 +46,11 @@
   }
 .insideText {
     text-align: center; /* Center the text */
+    font-size: 17pt;
+  }
+  .number {
+    text-align: center; /* Center the text */
+    font-size: 29pt;
   }
   .subCard {
     width: calc(33.33% - 10px);
@@ -58,24 +63,34 @@
     justify-content: center;
     align-items: center;
     font-family: 'Thunder-BoldLC';
-    font-size: 15pt;
+    font-size: 16pt;
     margin: 10px;
+    margin-bottom: 5px;
   }
   
   .heading {
     justify-content: center;
     align-items: center;
     font-family: 'Thunder-BoldLC';
+    font-size: 30pt;
+    margin-bottom: 5px;
   }
   
   .fonts {
     font-family: 'Thunder-BoldLC';
-    font-size: 5rem; /* Adjust the font size as needed */
+    font-size: 17pt; /* Adjust the font size as needed */
   }
   
   .main {
     font-family: 'Thunder-BoldLC';
-    font-size: 40pt; /* Adjust the font size as needed */
+    font-size: 40pt;
+    margin-top: 5px;
     align-items: center;
+    margin-bottom: 15px;
   }
   
+  .text {
+    font-family: 'Thunder-BoldLC';
+    align-items: center;
+    font-size: 30pt;
+  }
