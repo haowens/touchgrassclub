@@ -1,0 +1,20 @@
+{
+  "files": {
+    "main.css": "/touchgrassclub/static/css/main.b013932d.css",
+    "main.js": "/touchgrassclub/static/js/main.adb3344f.js",
+    "static/js/453.6f1b2609.chunk.js": "/touchgrassclub/static/js/453.6f1b2609.chunk.js",
+    "static/media/adrianne.png": "/touchgrassclub/static/media/adrianne.98bd6b3cd0f6e2ad2dce.png",
+    "static/media/hiking.png": "/touchgrassclub/static/media/hiking.6660435166ef14d2e151.png",
+    "static/media/cooking.png": "/touchgrassclub/static/media/cooking.1b31d79f630903b847e3.png",
+    "static/media/running.png": "/touchgrassclub/static/media/running.f571dd92d98fb724403b.png",
+    "static/media/profile_icon.png": "/touchgrassclub/static/media/profile_icon.dab47da761ffd5c6171a.png",
+    "index.html": "/touchgrassclub/index.html",
+    "main.b013932d.css.map": "/touchgrassclub/static/css/main.b013932d.css.map",
+    "main.adb3344f.js.map": "/touchgrassclub/static/js/main.adb3344f.js.map",
+    "453.6f1b2609.chunk.js.map": "/touchgrassclub/static/js/453.6f1b2609.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.b013932d.css",
+    "static/js/main.adb3344f.js"
+  ]
+}
