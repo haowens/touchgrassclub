@@ -1,0 +1,96 @@
+.cardContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+  }
+  
+  .row {
+    display: flex;
+    width: 100%;
+    margin-bottom: 10px;
+  }
+  
+  .leftCard {
+    width: 50%;
+    height: 120px;
+    background-color: rgb(184, 184, 255);
+    border: 1.5px solid #000000;
+    border-radius: 8px;
+    display: flex;
+    flex-direction: column; /* Change to column layout */
+    justify-content: center;
+    align-items: center;
+    font-family: 'Thunder-BoldLC';
+  }
+  
+  
+  .rightCard {
+    width: 50%; /* Adjust the width as needed */
+    height: 120px;
+    background-color: rgb(184, 184, 255);
+    border: 1.5px solid #000000;
+    border-radius: 8px;
+    display: flex;
+    flex-direction: column; /* Change to column layout */
+    justify-content: center;
+    align-items: center;
+    font-family: 'Thunder-BoldLC';
+    margin-left: 10px;
+  }
+  
+.row {
+    display: flex;
+    width: 100%;
+    margin-bottom: 10px;
+  }
+.insideText {
+    text-align: center; /* Center the text */
+    font-size: 17pt;
+  }
+  .number {
+    text-align: center; /* Center the text */
+    font-size: 29pt;
+  }
+  .subCard {
+    width: calc(33.33% - 10px);
+    height: 120px;
+    background-color: rgb(184, 184, 255);
+    border: 1.5px solid #000000;
+    border-radius: 8px;
+    display: flex;
+    flex-direction: column; /* Change to column layout */
+    justify-content: center;
+    align-items: center;
+    font-family: 'Thunder-BoldLC';
+    font-size: 16pt;
+    margin: 10px;
+    margin-bottom: 5px;
+  }
+  
+  .heading {
+    justify-content: center;
+    align-items: center;
+    font-family: 'Thunder-BoldLC';
+    font-size: 30pt;
+    margin-bottom: 5px;
+  }
+  
+  .fonts {
+    font-family: 'Thunder-BoldLC';
+    font-size: 17pt; /* Adjust the font size as needed */
+  }
+  
+  .main {
+    font-family: 'Thunder-BoldLC';
+    font-size: 40pt;
+    margin-top: 5px;
+    align-items: center;
+    margin-bottom: 15px;
+  }
+  
+  .text {
+    font-family: 'Thunder-BoldLC';
+    align-items: center;
+    font-size: 30pt;
+  }

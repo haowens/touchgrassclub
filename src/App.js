@@ -10,6 +10,8 @@ import Yoga from "./components/routes/Yoga";
 import Cooking from "./components/routes/Cooking";
 import EventPage from "./components/event_page";
 import Forum from "./components/forum";
+import AboutUs from "./components/aboutus";
+import Card from "./components/card";
 import ContactForm from "./components/ContactForm";
 
 function App() {
@@ -20,6 +22,8 @@ function App() {
         <Route path="/running" element={<EventPage/>} />
         <Route path="/forum" element={<Forum/>} />
         <Route path="/arts" element={<Arts />} />
+        <Route path="/aboutus" element={<AboutUs />} />
+        <Route path="/card" element={<Card />} />
         {/* Add more routes for additional pages */} 
         <Route path="/reading" element={<Reading />} />
         <Route path="/yoga" element={<Yoga />} />
