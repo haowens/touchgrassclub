@@ -1,8 +1,17 @@
 import React from 'react';
 import './card.css'; // Import CSS file for styling
 import AboutUs from './aboutus';
+import { useNavigate } from 'react-router-dom';
 
 const Card = () => {
+  const navigate = useNavigate()
+
+  const handleButtonClickContact = () => {
+    navigate('/contact');
+  }
+  const handleButtonClickAbout = () => {
+    navigate('/about');
+  }
     return (
         <div className="cardContainer">
             
@@ -43,6 +52,8 @@ const Card = () => {
             <div className="main">
                 <h1> TOUCH THE GRASS</h1>
                 </div>
+                <button className="feedback1" onClick={handleButtonClickContact}>Add an event or resource</button>
+      <button className="feedback3" onClick={handleButtonClickAbout}>About us!</button>
             </div>
           );
         };

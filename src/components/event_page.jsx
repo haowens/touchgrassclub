@@ -43,9 +43,12 @@ const EventPage = () => {
     const [additionalInfo, setAdditionalInfo] = useState({});
     const navigate = useNavigate();
 
-    const handleButtonClick = () => {
-        navigate('/contact');
-      }
+    const handleButtonClickContact = () => {
+      navigate('/contact');
+    }
+    const handleButtonClickAbout = () => {
+      navigate('/card');
+    }
 
     const forum = () => {
         navigate("/forum");
@@ -112,8 +115,8 @@ return (
                 <button className="button"><b style={{fontSize: "medium"}}>Carolina North Forest</b></button>
             </div>
         </div>
-        <button className="feedback1" onClick={handleButtonClick}>Add an event or resource</button>
-      <button className="feedback3" onClick={handleButtonClick}>About us!</button>
+        <button className="feedback1" onClick={handleButtonClickContact}>Add an event or resource</button>
+      <button className="feedback3" onClick={handleButtonClickAbout}>About us!</button>
 
 
     </div>

@@ -33,8 +33,11 @@ const Forum = () => {
   const [inputText, setInputText] = useState('');
   const navigate = useNavigate();
 
-  const handleButtonClick = () => {
+  const handleButtonClickContact = () => {
     navigate('/contact');
+  }
+  const handleButtonClickAbout = () => {
+    navigate('/card');
   }
 
   const handleMessageSubmit = (e) => {
@@ -65,7 +68,7 @@ const Forum = () => {
                 value={inputText}
                 onChange={(e) => setInputText(e.target.value)}
                 placeholder="Type your message..."
-                className='input-1'
+                className='input-2'
               />
               <button type="submit" className="send-button">Send</button>
             </form>
@@ -83,8 +86,8 @@ const Forum = () => {
           ))}
         </div>
       </div>
-      <button className="feedback1" onClick={handleButtonClick}>Add an event or resource</button>
-      <button className="feedback3" onClick={handleButtonClick}>About us!</button>
+      <button className="feedback1" onClick={handleButtonClickContact}>Add an event or resource</button>
+      <button className="feedback3" onClick={handleButtonClickAbout}>About us!</button>
     </div>
   );
 };

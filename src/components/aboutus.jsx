@@ -5,6 +5,8 @@ import timeData from './time.csv';
 const AboutUs = () => {
   const svgRef = useRef(null);
 
+  
+
   useEffect(() => {
     // Fetch the data from the CSV file
     d3.csv(timeData).then(data => {
@@ -98,7 +100,7 @@ const AboutUs = () => {
 
   return (
     <div style={{ marginTop: '10px',display: 'flex', justifyContent: 'center', flexDirection: 'column-reverse', alignItems: 'center' }}>
-      <p>Data from the American Time Use Survey</p>
+      <p style={{fontSize: 'x-large', fontFamily: 'Thunder', color: 'rgb(63, 0, 111)'}}>Data from the American Time Use Survey</p>
       <svg ref={svgRef}></svg>
       
     </div>

@@ -28,8 +28,11 @@ const Cooking = () => {
   const navigate = useNavigate();
 
 
-  const handleButtonClick = () => {
+  const handleButtonClickContact = () => {
     navigate('/contact');
+  }
+  const handleButtonClickAbout = () => {
+    navigate('/card');
   }
 
 
@@ -47,8 +50,8 @@ const Cooking = () => {
           <h1 style={customFontStyle} > FREE OPTIONS </h1>
         </div>
       </div>
-      <button className="feedback1" onClick={handleButtonClick}>Add an event or resource</button>
-      <button className="feedback3" onClick={handleButtonClick}>About us!</button>
+      <button className="feedback1" onClick={handleButtonClickContact}>Add an event or resource</button>
+      <button className="feedback3" onClick={handleButtonClickAbout}>About us!</button>
     </div>
   );
 };
