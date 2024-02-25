@@ -13,6 +13,7 @@ import EventPage from "./components/event_page";
 import Mapping from "./components/mapping";
 import Forum from "./components/forum";
 import AboutUs from "./components/aboutus";
+import Card from "./components/card";
 
 function App() {
   return (
@@ -23,6 +24,7 @@ function App() {
         <Route path="/forum" element={<Forum/>} />
         <Route path="/arts" element={<Arts />} />
         <Route path="/aboutus" element={<AboutUs />} />
+        <Route path="/card" element={<Card />} />
         {/* Add more routes for additional pages */} 
         <Route path="/" element={<HomePageDrag />} />
         <Route path="/reading" element={<Reading />} />
