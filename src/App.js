@@ -12,6 +12,7 @@ import Cooking from "./components/routes/Cooking";
 import EventPage from "./components/event_page";
 import Mapping from "./components/mapping";
 import Forum from "./components/forum";
+import AboutUs from "./components/aboutus";
 
 function App() {
   return (
@@ -21,6 +22,7 @@ function App() {
         <Route path="/running" element={<EventPage/>} />
         <Route path="/forum" element={<Forum/>} />
         <Route path="/arts" element={<Arts />} />
+        <Route path="/aboutus" element={<AboutUs />} />
         {/* Add more routes for additional pages */} 
         <Route path="/" element={<HomePageDrag />} />
         <Route path="/reading" element={<Reading />} />
