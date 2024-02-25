@@ -18,12 +18,11 @@ function App() {
     <Router>
       <Routes>
         <Route path="/map" element={<ChapelHillMap/>} />
-        <Route path="/events" element={<EventPage/>} />
+        <Route path="/running" element={<EventPage/>} />
         <Route path="/forum" element={<Forum/>} />
         <Route path="/arts" element={<Arts />} />
         {/* Add more routes for additional pages */} 
         <Route path="/" element={<HomePageDrag />} />
-        <Route path="/running" element={<Running />} />
         <Route path="/reading" element={<Reading />} />
         <Route path="/yoga" element={<Yoga />} />
         <Route path="/hiking" element={<Hiking />} />
