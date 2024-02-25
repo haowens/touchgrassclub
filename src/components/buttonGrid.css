@@ -1,0 +1,30 @@
+.button-container {
+    margin-left: '20px';
+    margin-top: '10px';
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+}
+
+.button {
+    font-size: '4rem';
+    width: '30px';
+    padding: 30px;
+    background-color: 'white';
+    color: 'black';
+    border: 2px solid black;
+    text-align: center;
+    /* cursor: pointer; */
+}
+
+.button:focus {
+    font-size: '4rem';
+    width: '30px';
+    padding: 30px;
+    background-color: grey;
+    color: 'black';
+    border: 2px solid black;
+    text-align: center;
+    cursor: pointer;
+
+}
