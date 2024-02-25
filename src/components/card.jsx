@@ -1,10 +1,13 @@
 import React from 'react';
 import './card.css'; // Import CSS file for styling
+import AboutUs from './aboutus';
 
 const Card = () => {
     return (
         <div className="cardContainer">
+            
         <h1 className='main'> ABOUT US</h1>
+        <AboutUs />
                <div className="row">
                     <div className="leftCard">
                         <h2 className="number">12 years</h2>

@@ -1,103 +1,108 @@
 import React, { useEffect, useRef } from 'react';
 import * as d3 from 'd3';
+import timeData from './time.csv';
 
 const AboutUs = () => {
-    
-//   const chartRef = useRef(null);
+  const svgRef = useRef(null);
 
-//   useEffect(() => {
-//     const fetchDataAndDrawChart = async () => {
-//       try {
-//         const response = await fetch('time.csv');
-//         const text = await response.text();
-//         const data = d3.csvParse(text, d3.autoType);
-//         drawChart(data);
-//       } catch (error) {
-//         console.error('Error fetching or parsing data:', error);
-//       }
-//     };
+  useEffect(() => {
+    // Fetch the data from the CSV file
+    d3.csv(timeData).then(data => {
 
-//     fetchDataAndDrawChart();
-//   }, []);
+      console.log(data)
+      // Specify the chart dimensions
+      const width = 628;
+      const height = 600;
+      const marginTop = 20;
+      const marginRight = 20;
+      const marginBottom = 80;
+      const marginLeft = 80;
 
-//   const drawChart = (time) => {
-//     const width = 928;
-//     const height = 600;
-//     const marginTop = 20;
-//     const marginRight = 20;
-//     const marginBottom = 80;
-//     const marginLeft = 80;
+      // Define colors for each activity
+      const activityColors = {
+        "Working": "rgb(184, 184, 255)",
+        "Socializing": "#7272ff",
+        "Watching TV": "#4242ff",
+        "Sleeping": "#0000ff",
+        "Playing Sports": "#20005a",
+        "Reading": "#1500ff"
+      };
 
-//     const activityColors = {
-//       "Working": "#1f77b4",
-//       "Socializing": "#ff7f0e",
-//       "Watching TV": "#2ca02c",
-//       "Sleeping": "#d62728",
-//       "Playing Sports": "#9467bd",
-//       "Reading": "#d62728"
-//     };
+      // Filter the data to include only indices 0 to 9
+      const filteredData = data.slice(0, 10);
 
-//     const x = d3.scaleLinear()
-//       .domain([0, time.length - 1])
-//       .range([marginLeft, width - marginRight]);
+      // Create the positional scales
+      const x = d3.scaleLinear()
+        .domain([0, filteredData.length - 1]) // Set the domain to the length of the filtered data array
+        .range([marginLeft, width - marginRight]);
 
-//     const y = d3.scaleLinear()
-//       .domain([0, d3.max(time, d => d3.max(Object.values(d).slice(1)))]).nice()
-//       .range([height - marginBottom, marginTop]);
+      const y = d3.scaleLinear()
+        .domain([0, d3.max(filteredData, d => d3.max(Object.values(d).slice(1)))]).nice()
+        .range([height - marginBottom, marginTop]);
 
-//     const svg = d3.select(chartRef.current)
-//       .append("svg")
-//       .attr("width", width)
-//       .attr("height", height)
-//       .attr("viewBox", `0 0 ${width} ${height}`)
-//       .attr("style", "max-width: 100%; height: auto; overflow: visible; font: 10px sans-serif;");
+      // Create the SVG container
+      const svg = d3.select(svgRef.current)
+        .attr("width", width)
+        .attr("height", height)
+        .attr("viewBox", [0, 0, width, height])
+        .attr("style", "max-width: 100%; height: auto; overflow: visible; font: 10px sans-serif;");
 
-//     svg.append("g")
-//       .attr("transform", `translate(0,${height - marginBottom})`)
-//       .call(d3.axisBottom(x).ticks(time.length).tickFormat((d, i) => time[i].Activity))
-//       .append("text")
-//       .attr("x", width - marginRight)
-//       .attr("y", -10)
-//       .attr("text-anchor", "end")
-//       .text("Year");
+      // Add the horizontal axis
+      svg.append("g")
+        .attr("transform", `translate(0,${height - marginBottom})`)
+        .call(d3.axisBottom(x).ticks(filteredData.length).tickFormat((_, i) => filteredData[i].Activity))
+        .append("text")
+          .attr("x", width - marginRight)
+          .attr("y", -10)
+          .attr("text-anchor", "end")
+          .text("Year");
 
-//     svg.append("g")
-//       .attr("transform", `translate(${marginLeft},0)`)
-//       .call(d3.axisLeft(y))
-//       .call(g => g.select(".domain").remove())
-//       .append("text")
-//       .attr("x", 10)
-//       .attr("y", marginTop - 10)
-//       .attr("text-anchor", "start")
-//       .text("Activity (%)");
+      // Add the vertical axis
+      svg.append("g")
+        .attr("transform", `translate(${marginLeft},0)`)
+        .call(d3.axisLeft(y))
+        .call(g => g.select(".domain").remove())
+        .append("text")
+          .attr("x", 10)
+          .attr("y", marginTop - 10)
+          .attr("text-anchor", "start")
+          .text("Activity (%)");
 
-//     const line = d3.line()
-//       .x((d, i) => x(i))
-//       .y(d => y(d));
+      // Draw the lines
+      const line = d3.line()
+        .x((_, i) => x(i)) // Use the index i as x-coordinate
+        .y(d => y(d));
 
-//     Object.keys(time[0]).slice(1).forEach((key, i) => {
-//       svg.append("path")
-//         .datum(time.map(d => d[key]))
-//         .attr("fill", "none")
-//         .attr("stroke", activityColors[key])
-//         .attr("stroke-width", 2)
-//         .attr("d", line)
-//         .on("mouseover", (event, d) => {
-//           const [xCoord, yCoord] = d3.pointer(event);
-//           svg.append("text")
-//             .attr("class", "tooltip")
-//             .attr("x", xCoord)
-//             .attr("y", yCoord - 10)
-//             .attr("text-anchor", "middle")
-//             .text(`${key}`);
-//         })
-//         .on("mouseout", () => {
-//           svg.select(".tooltip").remove();
-//         });
-//     });
-//   };
+      Object.keys(filteredData[0]).slice(1).forEach((key, i) => {
+        svg.append("path")
+          .datum(filteredData.map(d => d[key]))
+          .attr("fill", "none")
+          .attr("stroke", activityColors[key])
+          .attr("stroke-width", 2)
+          .attr("d", line)
+          .on("mouseover", (event, d) => {
+            const [xCoord, yCoord] = d3.pointer(event);
+            svg.append("text")
+              .attr("class", "tooltip")
+              .attr("x", xCoord)
+              .attr("y", yCoord - 10)
+              .attr("text-anchor", "middle")
+              .text(`${key}`);
+          })
+          .on("mouseout", () => {
+            svg.select(".tooltip").remove();
+          });
+      });
+    });
+  }, []);
 
-  return <div></div>;
+  return (
+    <div style={{ marginTop: '10px',display: 'flex', justifyContent: 'center', flexDirection: 'column-reverse', alignItems: 'center' }}>
+      <p>Data from the American Time Use Survey</p>
+      <svg ref={svgRef}></svg>
+      
+    </div>
+  );
 };
 
 export default AboutUs;
