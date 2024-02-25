@@ -2,6 +2,6 @@
 @font-face {
     font-family: 'Thunder-BoldLC';
     src: local('Thunder-BoldLC-Regular'),
-        url('./fonts/Thunder-BoldLC.ttf') format('ttf');
+        url('./fonts/Thunder-BoldLC.otf') format('otf');
 }
 
