@@ -4,8 +4,8 @@ import * as d3Tile from "d3-tile";
 
 const Run = () => {
     useEffect(() => {
-        const mapWidth = 500; // Define width of the map
-        const mapHeight = 660; // Define height of the map
+        const mapWidth = 700; // Define width of the map
+        const mapHeight = 760; // Define height of the map
         const width = 750;
         const height = 770;
 
