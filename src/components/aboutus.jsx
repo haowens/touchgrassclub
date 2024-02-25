@@ -97,8 +97,8 @@ const AboutUs = () => {
   }, []);
 
   return (
-    <div style={{ marginTop: '10px',display: 'flex', justifyContent: 'center', flexDirection: 'column-reverse', alignItems: 'center' }}>
-      <p>Data from the American Time Use Survey</p>
+    <div style={{ marginTop: '10px', display: 'flex', justifyContent: 'center', flexDirection: 'column-reverse', alignItems: 'center' }}>
+      <p style={{marginTop: '5px'}}>Data from the American Time Use Survey</p>
       <svg ref={svgRef}></svg>
       
     </div>
