@@ -4,8 +4,8 @@ import * as d3Tile from "d3-tile";
 
 const Mapping = () => {
     useEffect(() => {
-        const mapWidth = 500; // Define width of the map
-        const mapHeight = 660; // Define height of the map
+        const mapWidth = 700; // Define width of the map
+        const mapHeight = 760; // Define height of the map
         const width = 750;
         const height = 770;
 
@@ -13,7 +13,7 @@ const Mapping = () => {
         const projection = d3.geoMercator()
             .center([-79.0558, 35.9132])
             .scale(Math.pow(2, 23) / (2 * Math.PI))
-            .translate([mapWidth / 2, mapHeight / 2]);
+            .translate([mapWidth / 2.5 , mapHeight / 2]);
 
         // Define path generator
         const path = d3.geoPath(projection);
