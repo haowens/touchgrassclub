@@ -11,8 +11,8 @@ const AboutUs = () => {
 
       console.log(data)
       // Specify the chart dimensions
-      const width = 628;
-      const height = 600;
+      const width = 528;
+      const height = 450;
       const marginTop = 20;
       const marginRight = 20;
       const marginBottom = 80;
