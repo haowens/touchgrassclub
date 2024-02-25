@@ -1,75 +1,75 @@
 body {
-    background-color: lightblue;
-  }
+  background-color: lightblue;
+}
 
-   .forum-container {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    background-color: lightblue;
-    padding: 20px;
-    height: 100vh;
-  }
-  
-  .forum-content {
-    display: flex;
-    font-family: "Gill Sans", sans-serif;
-    font-size: large;
-    justify-content: space-between;
-    width: 100%;
-  }
-  
-  .post-card {
-    width: 30%;
-  }
-  
-  .messages-container {
-    width: 65%;
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
-  }
-  
-  .message-card {
-    background-color: #e6e6fa; /* Light purple */
-    border-radius: 10px;
-    padding: 10px;
-  }
-  
-  .card-header {
-    display: flex;
-    align-items: center;
-  }
-  
-  .profile-picture {
-    width: 50px;
-    height: 50px;
-    border-radius: 50%;
-    margin-right: 10px;
-  }
-  
-  .message-input {
-    width: calc(100% - 100px); /* Adjust based on button width */
-    padding: 15px;
-    margin-right: 10px;
-  }
-  
-  .send-button {
-    width: 100px; /* Adjust as needed */
-    padding: 7px;
-    margin-top: 5px;
-    background-color: #4caf50; /* Green */
-    color: white;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-  }
-  
-  .send-button:hover {
-    background-color: #45a049; /* Darker green */
-  }
-  
-  .message {
-    word-wrap: break-word;
-  }
-  
+.forum-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: lightblue;
+  padding: 10px 100px;
+  height: 100vh;
+}
+
+.forum-content {
+  display: flex;
+  font-family: "Gill Sans", sans-serif;
+  font-size: large;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.post-card {
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+}
+
+.messages-container {
+  width: 50%;
+  display: flex;
+  flex-direction: column-reverse;
+  gap: 10px;
+}
+
+.message-card {
+  background-color: #e6e6fa; /* Light purple */
+  border-radius: 10px;
+  padding: 10px;
+}
+
+.card-header {
+  display: flex;
+  align-items: center;
+}
+
+.profile-picture {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  margin-right: 10px;
+}
+
+
+.send-button {
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+  width: 20%;
+  padding: 10px;
+  border: none;
+  border-radius: 7px;
+  background-color: rgb(184, 184, 255);
+  font-size: x-large;
+  font-family: "Thunder";
+  margin-bottom: 100px;
+}
+
+.send-button:hover {
+  cursor: pointer;
+}
+
+
+.message {
+  word-wrap: break-word;
+}

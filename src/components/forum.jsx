@@ -12,13 +12,23 @@ const customFontStyle = {
 const fontStyle = {
     fontFamily: 'Thunder-BoldLC',
     textAlign: 'center',
+    fontSize: '4rem',
+    marginBottom: "30px"
+};
+
+const fontStyle2 = {
+  fontFamily: 'Thunder-BoldLC',
+  textAlign: 'center',
+  fontSize: '4rem',
+  marginBottom: "30px",
+  color: "rgb(101, 30, 99)"
 };
 
 const Forum = () => {
   const [messages, setMessages] = useState([
-    { name: "Sara", message: "Hey guys! 3 of my friends are going hiking in Eno State Park on Saturday. We have 2 more spots available in our car if anyone wants to join!", id: 1 },
-    { name: "Andrew", message: "Hey! If you're interested in reading you should check out the library crawl that I am organising next Tuesday! Few more spots open :) ", id: 2 },
-    { name: "Ananya", message: "Does anyone want to go rock climbing with me at Pilot Mountain? Looking for a climbing buddy!", id: 3 }
+    { name: "Sara", message: "Hey guys! I don't have a car and live on UNC's campus, can anyone pick up my race packet for me tomorrow??", id: 1 },
+    { name: "Andrew", message: "Hey guys, does anyone remember where all the hills were last year?", id: 2 },
+    { name: "Ananya", message: "Also need someone to pick up my race packet for me!!! Will get you coffee as a thank you :)", id: 3 }
   ]);
   const [inputText, setInputText] = useState('');
   const navigate = useNavigate();
@@ -37,22 +47,25 @@ const Forum = () => {
 
   return (
     <div className="forum-container">
-      <h1 style={customFontStyle}>FORUM</h1>
-      <h1 style={fontStyle}>Find your tribe! Get in touch with your community!</h1>
+      {/* <h1 style={customFontStyle}>FORUM</h1> */}
+      <div style={{display:"flex", flexDirection: "row", gap: "15px"}}>
+        <h1 style={fontStyle}>ALL THINGS</h1>
+        <h1 style={fontStyle2}>TAR HEEL 10</h1>
+      </div>
       <div className='forum-content'> 
         <div className="post-card">
           <div className="card-header">
             <img src={profile} alt="Profile" className="profile-picture" />
-            <h2>John Doe</h2>
+            <h2>Your Name</h2>
           </div>
           <div className="card-body">
-            <form onSubmit={handleMessageSubmit}>
+            <form onSubmit={handleMessageSubmit} style={{display: "flex", flexDirection: "column", gap: "20px"}}>
               <input
                 type="text"
                 value={inputText}
                 onChange={(e) => setInputText(e.target.value)}
                 placeholder="Type your message..."
-                className="message-input"
+                className='input-1'
               />
               <button type="submit" className="send-button">Send</button>
             </form>
