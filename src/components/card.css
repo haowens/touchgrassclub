@@ -1,28 +1,81 @@
 .cardContainer {
     display: flex;
-    justify-content: center; /* Center the content horizontally */
+    flex-direction: column;
     align-items: center;
-    width: 80%; /* Adjust width as needed */
-    margin: 0 auto; /* Center the container horizontally */
-    padding: 40px;
-    border-radius: 8px;
+    padding: 20px;
+  }
+  
+  .row {
+    display: flex;
+    width: 100%;
+    margin-bottom: 10px;
   }
   
   .leftCard {
-    background-color: rgb(184, 184, 255);; /* Background color for left card */
-    padding: 50px;
+    width: 50%;
+    height: 120px;
+    background-color: rgb(184, 184, 255);
+    border: 1.5px solid #000000;
     border-radius: 8px;
-    margin-right: 10px;
-    width: 150px;
-    font-size: 20px;
-
+    display: flex;
+    flex-direction: column; /* Change to column layout */
+    justify-content: center;
+    align-items: center;
+    font-family: 'Thunder-BoldLC';
   }
   
+  
   .rightCard {
-
-    padding: 20px;
+    width: 50%; /* Adjust the width as needed */
+    height: 120px;
+    background-color: rgb(184, 184, 255);
+    border: 1.5px solid #000000;
     border-radius: 8px;
-    font-size: 20px;
-    margin-right: 40px;
+    display: flex;
+    flex-direction: column; /* Change to column layout */
+    justify-content: center;
+    align-items: center;
+    font-family: 'Thunder-BoldLC';
+    margin-left: 10px;
+  }
+  
+.row {
+    display: flex;
+    width: 100%;
+    margin-bottom: 10px;
+  }
+.insideText {
+    text-align: center; /* Center the text */
+  }
+  .subCard {
+    width: calc(33.33% - 10px);
+    height: 120px;
+    background-color: rgb(184, 184, 255);
+    border: 1.5px solid #000000;
+    border-radius: 8px;
+    display: flex;
+    flex-direction: column; /* Change to column layout */
+    justify-content: center;
+    align-items: center;
+    font-family: 'Thunder-BoldLC';
+    font-size: 15pt;
+    margin: 10px;
+  }
+  
+  .heading {
+    justify-content: center;
+    align-items: center;
+    font-family: 'Thunder-BoldLC';
+  }
+  
+  .fonts {
+    font-family: 'Thunder-BoldLC';
+    font-size: 5rem; /* Adjust the font size as needed */
+  }
+  
+  .main {
+    font-family: 'Thunder-BoldLC';
+    font-size: 40pt; /* Adjust the font size as needed */
+    align-items: center;
   }
   
