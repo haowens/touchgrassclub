@@ -58,8 +58,9 @@ const Run = () => {
                 .datum({ type: "LineString", coordinates: route })
                 .attr("class", "route")
                 .attr("d", path)
-                .style("stroke", 'red')
-                .style("stroke-width", 2)
+                .style("stroke", "#69b3a2")
+                .style("fill", "#69b3a2")
+                .style("stroke-width", 4)
                 .style("fill", "none");
         });
     }, []);

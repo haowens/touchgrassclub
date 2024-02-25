@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import "./chatStyle.css";
 import profile from "./profile_icon.png";
+import { useNavigate } from 'react-router-dom';
 
 const customFontStyle = {
     fontFamily: 'Thunder-BoldLC',
@@ -20,6 +21,11 @@ const Forum = () => {
     { name: "Ananya", message: "Does anyone want to go rock climbing with me at Pilot Mountain? Looking for a climbing buddy!", id: 3 }
   ]);
   const [inputText, setInputText] = useState('');
+  const navigate = useNavigate();
+
+  const handleButtonClick = () => {
+    navigate('/contact');
+  }
 
   const handleMessageSubmit = (e) => {
     e.preventDefault();
@@ -64,6 +70,8 @@ const Forum = () => {
           ))}
         </div>
       </div>
+      <button className="feedback1" onClick={handleButtonClick}>Add an event or resource</button>
+      <button className="feedback3" onClick={handleButtonClick}>About us!</button>
     </div>
   );
 };

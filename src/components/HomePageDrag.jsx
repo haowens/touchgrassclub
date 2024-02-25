@@ -8,18 +8,16 @@ const HomePageDrag = () => {
   const [overlapYoga, setOverlapYoga] = useState(false);
   const [overlapHiking, setOverlapHiking] = useState(false);
   const [overlapCooking, setOverlapCooking] = useState(false);
-  const [overlapArts, setOverlapArts] = useState(false);
   const runningRef = useRef(null);
   const readingRef = useRef(null);
   const yogaRef = useRef(null);
   const hikingRef = useRef(null);
   const cookingRef = useRef(null);
-  const artsRef = useRef(null);
   const portalRef = useRef(null);
   const navigate = useNavigate();
 
   const handleButtonClick = () => {
-    navigate('/forum');
+    navigate('/contact');
   }
   const handleDrop = () => {
     const running = runningRef.current.getBoundingClientRect();
@@ -27,7 +25,6 @@ const HomePageDrag = () => {
     const yoga = yogaRef.current.getBoundingClientRect();
     const hiking = hikingRef.current.getBoundingClientRect();
     const cooking = cookingRef.current.getBoundingClientRect();
-    const arts = artsRef.current.getBoundingClientRect();
     const portal = portalRef.current.getBoundingClientRect();
 
     const runningIsFullyContained =
@@ -60,18 +57,11 @@ const HomePageDrag = () => {
     cooking.top >= portal.top &&
     cooking.bottom <= portal.bottom;
 
-    const artsIsFullyContained =
-    arts.left >= portal.left &&
-    arts.right <= portal.right &&
-    arts.top >= portal.top &&
-    arts.bottom <= portal.bottom;
-
     setOverlapRunning(runningIsFullyContained);
     setOverlapReading(readingIsFullyContained);
     setOverlapYoga(yogaIsFullyContained);
     setOverlapHiking(hikingIsFullyContained);
     setOverlapCooking(cookingIsFullyContained);
-    setOverlapArts(artsIsFullyContained);
 
     if (overlapRunning) {
         navigate("/running");
@@ -93,10 +83,6 @@ const HomePageDrag = () => {
         navigate("/cooking");
     }
 
-    if(overlapArts) {
-        navigate("/arts");
-    }
-
     console.log(runningIsFullyContained);
   };
 
@@ -106,7 +92,6 @@ const HomePageDrag = () => {
     const yoga = yogaRef.current.getBoundingClientRect();
     const hiking = hikingRef.current.getBoundingClientRect();
     const cooking = cookingRef.current.getBoundingClientRect();
-    const arts = artsRef.current.getBoundingClientRect();
     const portal = portalRef.current.getBoundingClientRect();
 
     const runningIsFullyContained =
@@ -139,22 +124,16 @@ const HomePageDrag = () => {
     cooking.top >= portal.top &&
     cooking.bottom <= portal.bottom;
 
-    const artsIsFullyContained =
-    arts.left >= portal.left &&
-    arts.right <= portal.right &&
-    arts.top >= portal.top &&
-    arts.bottom <= portal.bottom;
 
     setOverlapRunning(runningIsFullyContained);
     setOverlapReading(readingIsFullyContained);
     setOverlapYoga(yogaIsFullyContained);
     setOverlapHiking(hikingIsFullyContained);
     setOverlapCooking(cookingIsFullyContained);
-    setOverlapArts(artsIsFullyContained);
   };
 
   return (
-    <div>
+    <div className="home">
       <Draggable onDrag={handleDrag} onStop={handleDrop}>
         <div ref={runningRef} className="running"></div>
       </Draggable>
@@ -165,18 +144,16 @@ const HomePageDrag = () => {
         <div ref={yogaRef} className="yoga"></div>
       </Draggable>
       <Draggable onDrag={handleDrag} onStop={handleDrop}>
-        <div ref={hikingRef} className="hiking"></div>
-      </Draggable>
-      <Draggable onDrag={handleDrag} onStop={handleDrop}>
         <div ref={cookingRef} className="cooking"></div>
       </Draggable>
       <Draggable onDrag={handleDrag} onStop={handleDrop}>
-        <div ref={artsRef} className="arts"></div>
+        <div ref={hikingRef} className="hiking"></div>
       </Draggable>
-      <div ref={portalRef} className={`portal ${(overlapRunning || overlapReading || overlapYoga || overlapHiking || overlapCooking || overlapArts) ? 'overlap' : ''}`}></div>
+      
+      <div ref={portalRef} className={`portal ${(overlapRunning || overlapReading || overlapYoga || overlapHiking || overlapCooking ) ? 'overlap' : ''}`}></div>
     
-      <button className="feedback1">Add an event or resource</button>
-      <button className="feedback2" onClick={handleButtonClick}>Get in contact</button>
+      <button className="feedback1" onClick={handleButtonClick}>Add an event or resource</button>
+      <button className="feedback3" onClick={handleButtonClick}>About us!</button>
     </div>
   );
 };

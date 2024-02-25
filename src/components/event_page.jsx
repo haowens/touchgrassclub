@@ -3,6 +3,7 @@ import ChapelHillMap from "./ChapelHillMap";
 import "./buttonGrid.css";
 import Mapping from "./mapping";
 import Run from "./run";
+import { useNavigate } from "react-router-dom";
 
 const containerStyle = {
     display: 'flex',
@@ -20,9 +21,19 @@ const rightStyle = {
 };
 const customFontStyle = {
     fontFamily: 'Thunder-BoldLC',
-    textAlign: 'center',
-    fontSize: '5rem'
+    fontSize: '4rem',
+    margin: 'none'
 }
+
+ const feedback2 = {
+    textAlign: "center",
+    padding: "10px 20px",
+    border: "none",
+    borderRadius: "7px",
+    backgroundColor:  "rgb(211, 234, 255)",
+   color: "rgb(21, 0, 50)",
+   marginTop: "10px"
+  }
 
 
 const EventPage = () => {
@@ -30,6 +41,15 @@ const EventPage = () => {
     const [showRun, setShowRun] = useState(false);
     const [showAdditionalInfo, setShowAdditionalInfo] = useState(false);
     const [additionalInfo, setAdditionalInfo] = useState({});
+    const navigate = useNavigate();
+
+    const handleButtonClick = () => {
+        navigate('/contact');
+      }
+
+    const forum = () => {
+        navigate("/forum");
+    }
 
     const toggleComponent = () => {
         setShowMapping((prevShowMapping) => !prevShowMapping);
@@ -55,6 +75,7 @@ return (
         
 
         <div style={rightStyle}>
+            <div className="running2"></div>
             <h1 style={customFontStyle} > EVENTS </h1>
             <div className="button-container">
                 <button className="button" onClick={() =>
@@ -65,30 +86,34 @@ return (
             }>
                 
                 {/* onClick={toggleComponent}> */}
-                Tar Heel 10 
+                <b style={{fontSize: "medium"}}>Tar Heel 10</b>
                 {" "}
             {showAdditionalInfo && (
               <span>
                 <br />
                 Price: {additionalInfo.price} <br />
-                Date: {additionalInfo.date}
+                <p style={{color: "purple", margin: "0px"}}>Date: {additionalInfo.date} </p>
+                <button onClick={forum} style={feedback2}>Event Forum</button>
               </span>
             )}
                 </button> 
-                <button className="button"> CFTK 5k </button>
-                <button className="button"> City of Oaks Marathon </button>
-                <button className="button" onClick={toggleRun}> ZTA 5k </button>
-                <button className="button"> Triathlon </button>
-                <button className="button"> Annual 10k </button>
+                
+                <button className="button"><b style={{fontSize: "medium"}}>CFTK 5K</b></button>
+                <button className="button"><b style={{fontSize: "medium"}}>City of Oaks Marathon</b></button>
+                <button className="button"><b style={{fontSize: "medium"}}>ZTA 5k</b></button>
+                <button className="button"><b style={{fontSize: "medium"}}>Triathlon</b></button>
+                <button className="button"><b style={{fontSize: "medium"}}>Annual 10k</b></button>
             </div>
 
             <h1 style={customFontStyle} > FREE OPTIONS </h1>
             <div className="button-container">
-                <button className="button" onClick={toggleComponent}> Bolin Creek </button>
-                <button className="button"> Eno State Park </button>
-                <button className="button"> Carolina North Forest </button>
+                <button className="button" onClick={toggleComponent}><b style={{fontSize: "medium"}}>Bolin Creek</b></button>
+                <button className="button"><b style={{fontSize: "medium"}}>Eno State Park</b></button>
+                <button className="button"><b style={{fontSize: "medium"}}>Carolina North Forest</b></button>
             </div>
         </div>
+        <button className="feedback1" onClick={handleButtonClick}>Add an event or resource</button>
+      <button className="feedback3" onClick={handleButtonClick}>About us!</button>
 
 
     </div>
