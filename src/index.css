@@ -14,10 +14,10 @@ code {
 
 .running {
   display: inline-block;
-  width: 100px;
-  height: 100px;
+  width: 175px;
+  height: 290px;
   /* background: black; */
-  background-image: url('./images/adrianne.png');
+  background-image: url('./images/running.png');
   background-size: cover; 
 }
 
@@ -32,10 +32,10 @@ code {
 
 .cooking {
   display: inline-block;
-  width: 100px;
-  height: 100px;
+  width: 140px;
+  height: 260px;
   /* background: black; */
-  background-image: url('./images/adrianne.png');
+  background-image: url('./images/cooking.png');
   background-size: cover; 
 }
 
@@ -50,10 +50,10 @@ code {
 
 .hiking {
   display: inline-block;
-  width: 100px;
-  height: 100px;
+  width: 140px;
+  height: 300px;
   /* background: black; */
-  background-image: url('./images/adrianne.png');
+  background-image: url('./images/hiking.png');
   background-size: cover; 
 }
 
@@ -78,4 +78,52 @@ code {
 
 .overlap {
   background-color: yellowgreen;
+}
+
+.feedback1 {
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  text-align: center;
+  padding: 10px 40px;
+  border: none;
+  border-radius: 7px;
+  background-color: rgb(211, 234, 255);
+  font-size: large;
+}
+
+.feedback1:hover {
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  text-align: center;
+  padding: 10px 40px;
+  border: none;
+  border-radius: 7px;
+  background-color: rgb(184, 184, 255);
+  font-size: large;
+}
+
+.feedback2 {
+  position: fixed;
+  bottom: 80px;
+  right: 30px;
+  text-align: center;
+  padding: 10px 40px;
+  border: none;
+  border-radius: 7px;
+  background-color: rgb(211, 234, 255);
+  font-size: large;
+}
+
+.feedback2:hover {
+  position: fixed;
+  bottom: 80px;
+  right: 30px;
+  text-align: center;
+  padding: 10px 40px;
+  border: none;
+  border-radius: 7px;
+  background-color: rgb(184, 184, 255);
+  font-size: large;
 }

@@ -171,6 +171,8 @@ const HomePageDrag = () => {
         <div ref={artsRef} className="arts"></div>
       </Draggable>
       <div ref={portalRef} className={`portal ${(overlapRunning || overlapReading || overlapYoga || overlapHiking || overlapCooking || overlapArts) ? 'overlap' : ''}`}></div>
+      <button className="feedback1">Add an event or resource</button>
+      <button className="feedback2">Get in contact</button>
     </div>
   );
 };
