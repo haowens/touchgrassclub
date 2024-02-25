@@ -11,15 +11,15 @@ import Yoga from "./components/routes/Yoga";
 import Cooking from "./components/routes/Cooking";
 import EventPage from "./components/event_page";
 import Mapping from "./components/mapping";
+import Forum from "./components/forum";
 
 function App() {
   return (
     <Router>
       <Routes>
-        <Route path="/" element={<EventPage/>} />
         <Route path="/map" element={<ChapelHillMap/>} />
         <Route path="/events" element={<EventPage/>} />
-        <Route path="/coord" element={<Mapping/>} />
+        <Route path="/forum" element={<Forum/>} />
         <Route path="/arts" element={<Arts />} />
         {/* Add more routes for additional pages */} 
         <Route path="/" element={<HomePageDrag />} />
